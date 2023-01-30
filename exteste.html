@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é estrangeiro</title>
+</head>
+<body>
+     <h1>Me diz de qual país você é ?</h1>
+
+     <input type="text" name="lugar" id="país">
+     <input type="button" value="ANALISAR" onclick="onde()">
+     <div id="res"></div>
+
+     <script>
+        var pai = document.getElementById('país')
+        function onde(){
+            var lugar = String(pai.value)
+            var res = document.getElementById('res')
+            res.innerHTML = `<p>Então você mora no(a)<strong>${lugar}</strong></p>`
+
+            if (lugar =='Brasil'){
+                res.innerHTML += `<strong>Você é Brasileiro</strong>`
+            } else{
+               res.innerHTML = `<strong>Você é estrangeiro</strong>`
+            } 
+        }
+     </script>
+</body>
+</html>
